@@ -15,6 +15,7 @@ public class MovingChest extends GamePiece implements Moveable {
 		// TODO Auto-generated constructor stub
 	}
 	
+	
 	@Override
 	public InteractionResult interact(Drawable [] gameBoard, int playerLocation) {
 		if (playerLocation == getLocation()) {
