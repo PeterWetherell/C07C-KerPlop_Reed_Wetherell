@@ -3,6 +3,7 @@ package levelPieces;
 import java.util.ArrayList;
 
 import gameEngine.Drawable;
+import gameEngine.GameEngine;
 import gameEngine.Moveable;
 
 public class LevelSetup {
@@ -13,12 +14,11 @@ public class LevelSetup {
 	private int startLoc;
 
 	public void createLevel(int levelNum) {
+		board = new Drawable[GameEngine.BOARD_SIZE];
 		switch (levelNum) {
 		case 1:
-			board = new Drawable[10];
 			break;
 		case 2:
-			board = new Drawable[15];
 			break;
 		}
 	}

@@ -9,10 +9,9 @@ import gameEngine.Moveable;
 public class MovingChest extends GamePiece implements Moveable {
 	private Random r;
 	
-	public MovingChest(char symbol, String label, int location) {
-		super(symbol, label, location);
+	public MovingChest(int location) {
+		super('C', "Moving Chest (Moves randomly)", location);
 		r = new Random(System.nanoTime());
-		// TODO Auto-generated constructor stub
 	}
 	
 	@Override
@@ -25,7 +24,6 @@ public class MovingChest extends GamePiece implements Moveable {
 
 	@Override
 	public void move(Drawable[] gameBoard, int playerLocation) {
-		// TODO Auto-generated method stub
 		int newLocation = getLocation() + r.nextInt() % 3 - 1;
 		if (newLocation > 0 && newLocation < gameBoard.length - 1 && gameBoard[newLocation] == null) {
 			gameBoard[newLocation] = this;
