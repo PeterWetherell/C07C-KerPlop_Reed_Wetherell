@@ -11,9 +11,10 @@ public class ChargeEnemy extends GamePiece implements Moveable {
 
 	@Override
 	public void move(Drawable[] gameBoard, int playerLocation) {
-		// TODO Auto-generated method stub
 		int newLocation = getLocation() + (int) Math.signum(playerLocation - getLocation());
 		if (newLocation != playerLocation && newLocation >= 0 && newLocation < gameBoard.length && gameBoard[newLocation] == null) {
+			gameBoard[getLocation()] = null;
+			gameBoard[newLocation] = this;
 			setLocation(newLocation);
 		}
 	}

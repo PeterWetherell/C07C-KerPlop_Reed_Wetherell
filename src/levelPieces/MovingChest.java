@@ -23,9 +23,9 @@ public class MovingChest extends GamePiece implements Moveable {
 	}
 
 	@Override
-	public void move(Drawable[] gameBoard, int playerLocation) {
-		int newLocation = getLocation() + r.nextInt() % 3 - 1;
-		if (newLocation > 0 && newLocation < gameBoard.length - 1 && gameBoard[newLocation] == null) {
+	public void move(Drawable[] gameBoard, int playerLocation) {		
+		int newLocation = getLocation() + Math.abs(r.nextInt()) % 3 - 1;
+		if (newLocation >= 0 && newLocation < gameBoard.length && gameBoard[newLocation] == null) {
 			gameBoard[newLocation] = this;
 			gameBoard[getLocation()] = null;
 			setLocation(newLocation);

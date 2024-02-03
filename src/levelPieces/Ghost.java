@@ -33,7 +33,7 @@ public class Ghost extends GamePiece implements Moveable {
 				emptyIndex.add(i);
 			}
 		}
-		int newLocation = emptyIndex.get(r.nextInt()%emptyIndex.size());
+		int newLocation = emptyIndex.get(Math.abs(r.nextInt()) % emptyIndex.size());
 		gameBoard[getLocation()] = null;
 		gameBoard[newLocation] = this;
 		setLocation(newLocation);
