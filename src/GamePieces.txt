@@ -1,0 +1,20 @@
+Implements Drawable
+Mouse
+
+Extends GamePiece, implements Movable
+ChargeEnemy. Moves toward the player 1 tile at a time. Cannot cross other objects. Repeats this forever
+MovingChest. Moves randomly between 0 and 1 tile in either direction. Cannot cross other objects. Repeats forever.
+Ghost. Teleports to a random open square. Repeats forever.
+
+Extends GamePiece with various Interaction Result
+GET_POINT/NONE
+ - Coin. Gives the point when player is within a 1 tile radius, then disappears
+ - MovingChest. Gives the player a point when on the same tile with it. Doesn't disappear
+ HIT/NONE
+ - SpearEnemy. Hits you from 2 tiles away and only 2 tiles away
+ - ArcherEnemy. Hits if there is direct line of sight in any direction (excluding  wrap around).
+ - ChargeEnemy. If within a 1 tile radius, hits the player
+ KILL/NONE
+ - BearTrap. When on the same tile, kills player
+ ADVANCE/NONE
+ -GHOST. When on the same tile, advances player
