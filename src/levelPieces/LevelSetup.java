@@ -21,7 +21,7 @@ public class LevelSetup {
 		GamePiece p;
 		switch (levelNum) {
 		case 1:
-			board[3] = new Mouse(3);
+			board[3] = new Mouse();
 			p = new MovingChest(1);
 			board[1] = p;
 			interactingPieces.add(p);
