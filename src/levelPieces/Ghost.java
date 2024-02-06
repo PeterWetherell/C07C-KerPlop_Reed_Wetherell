@@ -1,3 +1,11 @@
+/**
+ * @author Mabel Reed
+ * @author Peter Wetherell
+ * Date: 2/4/2024
+ * Collaborators: None
+ * Sources: None
+ * Purpose: Advances the player when caught
+ */
 package levelPieces;
 
 import java.util.ArrayList;
@@ -25,7 +33,7 @@ public class Ghost extends GamePiece implements Moveable {
 
 	@Override
 	public void move(Drawable[] gameBoard, int playerLocation) {
-		// TODO Auto-generated method stub
+		// Get a random empty location to teleport to
 		ArrayList<Integer> emptyIndex = new ArrayList<>();
 		emptyIndex.add(getLocation());
 		for (int i = 0; i < gameBoard.length; i ++) {

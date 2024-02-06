@@ -1,3 +1,11 @@
+/**
+ * @author Mabel Reed
+ * @author Peter Wetherell
+ * Date: 2/4/2024
+ * Collaborators: None
+ * Sources: None
+ * Purpose: Piece that attacks the player when 2 tiles away
+ */
 package levelPieces;
 
 import gameEngine.Drawable;

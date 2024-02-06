@@ -1,0 +1,82 @@
+I, Mabel Reed, certify that I participated equitably in the creation of the assignment.
+I, Peter Wetherell, certify that I participated equitably in the creation of the assignment.
+
+commit 3ab18461b8640f3c457e7c3c12017421d049a09a
+Merge: 80245d2 925999b
+Author: Mabel Reed <mkreed@mines.edu>
+Date:   Sun Feb 4 13:50:37 2024 -0700
+
+    Merge branch 'main' of github.com:PeterWetherell/C07C-KerPlop_Reed_Wetherell
+
+commit 925999bbd528c7e3ed394895a1bcb309005e9327
+Author: dinomasater186 <peterwetherell186@gmail.com>
+Date:   Sun Feb 4 13:49:44 2024 -0700
+
+    Peter Wehterell- adding GamePieces.txt
+
+commit 80245d262ea0c7714abb9b73a1821421d3f0a724
+Merge: 180be97 4f58210
+Author: Mabel Reed <mkreed@mines.edu>
+Date:   Sun Feb 4 13:49:24 2024 -0700
+
+    Merge branch 'main' of github.com:PeterWetherell/C07C-KerPlop_Reed_Wetherell
+
+commit 180be9787379833fa4c525ef656532d9ecd00762
+Author: Mabel Reed <mkreed@mines.edu>
+Date:   Sun Feb 4 13:48:59 2024 -0700
+
+    Created GameUML.png
+
+commit 4f5821014680d7206337d388147f5214eafe2619
+Author: dinomasater186 <peterwetherell186@gmail.com>
+Date:   Sun Feb 4 13:30:42 2024 -0700
+
+    Peter Wehterell- fixing Mouse class
+
+commit d179bec0d61cd45726f4bebe3be8ba69ccae9597
+Author: Mabel Reed <mkreed@mines.edu>
+Date:   Sat Feb 3 13:38:18 2024 -0700
+
+    Created levels and fixed bugs
+
+commit 9f0cea53732238669adb60079dcb90d6739d5522
+Author: Mabel Reed <mkreed@mines.edu>
+Date:   Sat Feb 3 13:14:26 2024 -0700
+
+    Created coin and spear enemy
+
+commit ee163f2b6b2cf11ed57ff7f9a64e40a38bfddef0
+Author: dinomasater186 <peterwetherell186@gmail.com>
+Date:   Sat Feb 3 13:00:34 2024 -0700
+
+    Peter Wehterell- Added Mouse, Ghost, and BearTrap classes
+
+commit b8a40e37fa539ea580f3308f7f14cc0e5d8cf38c
+Author: Mabel Reed <mkreed@mines.edu>
+Date:   Sat Feb 3 12:39:42 2024 -0700
+
+    Created archer enemy
+
+commit 07941c95b823df7331c3cfe5c504a5942d971a9c
+Author: Mabel Reed <mkreed@mines.edu>
+Date:   Sat Feb 3 12:33:44 2024 -0700
+
+    Created charge enemy
+
+commit 28f60403446a14a384272d017882dc9bd8edbfae
+Author: Mabel Reed <mkreed@mines.edu>
+Date:   Sat Feb 3 12:17:38 2024 -0700
+
+    Test git again
+
+commit c3327bd717c9999a98ca8af7e2d7cb7519bf68a9
+Author: Mabel Reed <mkreed@mines.edu>
+Date:   Sat Feb 3 12:11:46 2024 -0700
+
+    Mabel Reed: Test git
+
+commit 5488dccce15df49e62db0e215b680e48cd03de8f
+Author: dinomasater186 <peterwetherell186@gmail.com>
+Date:   Sat Feb 3 11:54:58 2024 -0700
+
+    Peter Wehterell- Added LevelSetup and MovingChest class

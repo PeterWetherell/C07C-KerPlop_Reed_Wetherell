@@ -1,3 +1,11 @@
+/**
+ * @author Mabel Reed
+ * @author Peter Wetherell
+ * Date: 2/4/2024
+ * Collaborators: None
+ * Sources: None
+ * Purpose: Moves towards the player and attacks when in proximity
+ */
 package levelPieces;
 import gameEngine.Drawable;
 import gameEngine.InteractionResult;
@@ -11,6 +19,7 @@ public class ChargeEnemy extends GamePiece implements Moveable {
 
 	@Override
 	public void move(Drawable[] gameBoard, int playerLocation) {
+		// Move in the direction of the player if the square is empty
 		int newLocation = getLocation() + (int) Math.signum(playerLocation - getLocation());
 		if (newLocation != playerLocation && newLocation >= 0 && newLocation < gameBoard.length && gameBoard[newLocation] == null) {
 			gameBoard[getLocation()] = null;

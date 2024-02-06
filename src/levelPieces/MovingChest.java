@@ -1,5 +1,12 @@
 package levelPieces;
-
+/**
+ * @author Mabel Reed
+ * @author Peter Wetherell
+ * Date: 2/4/2024
+ * Collaborators: None
+ * Sources: None
+ * Purpose: Piece that awards points when the player catches it
+ */
 import java.util.Random;
 
 import gameEngine.Drawable;
@@ -23,7 +30,8 @@ public class MovingChest extends GamePiece implements Moveable {
 	}
 
 	@Override
-	public void move(Drawable[] gameBoard, int playerLocation) {		
+	public void move(Drawable[] gameBoard, int playerLocation) {	
+		// Moves one square to the left or right randomly, or doesn't move at all
 		int newLocation = getLocation() + Math.abs(r.nextInt()) % 3 - 1;
 		if (newLocation >= 0 && newLocation < gameBoard.length && gameBoard[newLocation] == null) {
 			gameBoard[newLocation] = this;

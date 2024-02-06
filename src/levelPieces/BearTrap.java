@@ -1,3 +1,11 @@
+/**
+ * @author Mabel Reed
+ * @author Peter Wetherell
+ * Date: 2/4/2024
+ * Collaborators: None
+ * Sources: None
+ * Purpose: Kills the player when stepped on
+ */
 package levelPieces;
 
 import gameEngine.Drawable;

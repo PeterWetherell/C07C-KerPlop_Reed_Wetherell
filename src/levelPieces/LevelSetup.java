@@ -1,3 +1,11 @@
+/**
+ * @author Mabel Reed
+ * @author Peter Wetherell
+ * Date: 2/4/2024
+ * Collaborators: None
+ * Sources: None
+ * Purpose: Sets up the levels
+ */
 package levelPieces;
 
 import java.util.ArrayList;
@@ -20,6 +28,7 @@ public class LevelSetup {
 		
 		GamePiece p;
 		switch (levelNum) {
+		// Setup level 1
 		case 1:
 			board[3] = new Mouse();
 			p = new MovingChest(1);
@@ -38,6 +47,7 @@ public class LevelSetup {
 			board[20] = p;
 			interactingPieces.add(p);
 			break;
+		// Setup level 2
 		case 2:
 			p = new Ghost(5);
 			board[5] = p;
@@ -58,22 +68,18 @@ public class LevelSetup {
 	}
 
 	public Drawable[] getBoard() {
-		// TODO Auto-generated method stub
 		return board;
 	}
 
 	public ArrayList<Moveable> getMovingPieces() {
-		// TODO Auto-generated method stub
 		return movingPieces;
 	}
 
 	public ArrayList<GamePiece> getInteractingPieces() {
-		// TODO Auto-generated method stub
 		return interactingPieces;
 	}
 
 	public int getPlayerStartLoc() {
-		// TODO Auto-generated method stub
 		return startLoc;
 	}
 
