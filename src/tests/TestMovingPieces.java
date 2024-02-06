@@ -4,6 +4,7 @@ import org.junit.Test;
 
 import gameEngine.Drawable;
 import gameEngine.GameEngine;
+import levelPieces.ChargeEnemy;
 import levelPieces.Ghost;
 import levelPieces.Mouse;
 import levelPieces.MovingChest;
@@ -91,7 +92,40 @@ public class TestMovingPieces {
 	
 	@Test
 	public void testChargeEnemy() throws Exception {
+		Drawable[] gameBoard = new Drawable[GameEngine.BOARD_SIZE];
+		gameBoard[10] = new Mouse();
+		ChargeEnemy c = new ChargeEnemy(0);
+		gameBoard[0] = c;
+		//see if the ChargeEnemy moves towards player
+		for (int i = 0; i < 9; i ++) {
+			int loc = c.getLocation();
+			c.move(gameBoard, 11); //player on other side of mouse
+			assert(c.getLocation() == loc+1); //check it is moving towards them
+		}
+		for (int i = 0; i < 10; i ++) {
+			c.move(gameBoard, 11); 
+			assert(c.getLocation() == 9); //check it respects the mouse
+		}
+
+		ChargeEnemy c2 = new ChargeEnemy(GameEngine.BOARD_SIZE-1);
+		gameBoard[GameEngine.BOARD_SIZE-1] = c2;
+		gameBoard[17] = new Mouse();
+		//see if the ChargeEnemy moves towards player
+		for (int i = 0; i < 2; i ++) {
+			int loc = c2.getLocation();
+			c2.move(gameBoard, 11); //player on other side of mouse
+			assert(c2.getLocation() == loc-1); //check it is moving towards them
+		}
+		for (int i = 0; i < 10; i ++) {
+			c2.move(gameBoard, 11); 
+			assert(c2.getLocation() == 18); //check it respects the mouse
+		}
 		
+		//check enemy doesn't move into player
+		ChargeEnemy c3 = new ChargeEnemy(16);
+		gameBoard[16] = c3;
+		c3.move(gameBoard, 15);
+		assert(c3.getLocation()==16);
 	}
 	
 }
