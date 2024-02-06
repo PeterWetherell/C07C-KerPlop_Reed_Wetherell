@@ -6,6 +6,7 @@ import gameEngine.Drawable;
 import gameEngine.GameEngine;
 import levelPieces.Ghost;
 import levelPieces.Mouse;
+import levelPieces.MovingChest;
 
 public class TestMovingPieces {
 	@Test
@@ -39,14 +40,58 @@ public class TestMovingPieces {
 			}
 		}
 	}
-	/*
+	
 	@Test
 	public void testMovingChest() throws Exception {
+		Drawable[] gameBoard = new Drawable[GameEngine.BOARD_SIZE];
+		gameBoard[5] = new Mouse();
 		
+		// expect moving chest to get stuck on the left side of the board
+		// and move left, right, or not at all at about the same frequency
+		MovingChest c = new MovingChest(2);
+		gameBoard[2] = c;
+		
+		int[] moveDirections = new int[3];
+
+		for (int i = 0; i < 500; i ++) { //loop 500 times and move the chest
+			int loc = c.getLocation();
+			c.move(gameBoard, 10);
+			
+			assert(c.getLocation() >= 0 && c.getLocation() < 5);
+			
+			moveDirections[1 - (int) (Math.signum(c.getLocation() - loc))]++;
+		}
+		
+		// check the movement is good
+		assert(moveDirections[0] > 100);
+		assert(moveDirections[1] > 100);
+		assert(moveDirections[2] > 100);
+		
+		// Check that the moving chest doesn't move off the right side of the board
+		gameBoard[19] = new Mouse();
+		MovingChest c2 = new MovingChest(20);
+		gameBoard[20] = c2;
+		
+		for (int i = 0; i < 100; i++) {
+			c2.move(gameBoard, 0);
+			assert(c2.getLocation() == 20);
+		}
+		
+		// Check that the moving chest gets stuck between 2 mice
+		gameBoard[15] = new Mouse();
+		MovingChest c3 = new MovingChest(16);
+		gameBoard[16] = c3;
+		gameBoard[17] = new Mouse();
+		
+		for (int i = 0; i < 100; i++) {
+			c3.move(gameBoard, 0);
+			assert(c3.getLocation() == 16);
+		}
 	}
+	
 	@Test
 	public void testChargeEnemy() throws Exception {
 		
 	}
-	*/
+	
 }
