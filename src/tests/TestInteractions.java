@@ -1,3 +1,11 @@
+/**
+ * @author Mabel Reed
+ * @author Peter Wetherell
+ * Date: 2/6/2024
+ * Collaborators: None
+ * Sources: None
+ * Purpose: Tests for interactions
+ */
 package tests;
 import static org.junit.Assert.*;
 import org.junit.Test;
